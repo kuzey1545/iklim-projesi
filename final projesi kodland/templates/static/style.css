@@ -1,0 +1,90 @@
+/* Arka plan */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ana kutu */
+.container {
+    background: white;
+    width: 420px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Başlık */
+h1 {
+    font-size: 28px;
+    color: #007acc;
+    margin-bottom: 10px;
+}
+
+/* Açıklama */
+p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Soru kutusu */
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007acc;
+    box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+}
+
+/* Sor butonu */
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #007acc, #00c6ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 122, 204, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(to right, #005f99, #00aaff);
+    transform: scale(1.05);
+    box-shadow: 0 7px 20px rgba(0, 122, 204, 0.6);
+}
+
+/* Cevap kutusu */
+#cevap {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f0f9ff;
+    border-left: 4px solid #007acc;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    min-height: 40px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}

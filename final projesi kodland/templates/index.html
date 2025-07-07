@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Iklim Asistani</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Iklim Asistani</h1>
+        <p>Iklim hakkinda merak ettiklerini sor!</p>
+        <form id="soruForm">
+            <input type="text" name="soru" id="soru" placeholder="Soru yaz...">
+            <button type="submit">Sor</button>
+        </form>
+        <div id="cevap"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById("soruForm");
+        form.onsubmit = async function(e) {
+            e.preventDefault();
+            const soru = document.getElementById("soru").value;
+            const response = await fetch("/sor", {
+                method: "POST",
+                headers: {"Content-Type": "application/x-www-form-urlencoded"},
+                body: `soru=${encodeURIComponent(soru)}`
+            });
+            const data = await response.json();
+            document.getElementById("cevap").innerText = data.cevap;
+        }
+    </script>
+</body>
+</html>
+
